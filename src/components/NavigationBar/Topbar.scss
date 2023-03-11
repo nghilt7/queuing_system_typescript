@@ -1,0 +1,177 @@
+.top-bar {
+  position: absolute;
+  width: 1240px;
+  height: 88px;
+  left: 200px;
+  top: 0px;
+
+  .nextIcon {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    top: 34px;
+    left: 120px;
+  }
+
+  .text-2 {
+    .text-next {
+      width: 168px;
+      height: 30px;
+      position: absolute;
+      top: 29px;
+      left: 170px;
+
+      /* 20/20 Bold */
+
+      font-family: "Nunito";
+      font-style: normal;
+      font-weight: 700;
+      font-size: 20px;
+      line-height: 30px;
+
+      color: #ff9138;
+    }
+  }
+
+  .bell {
+    position: absolute;
+    width: 32px;
+    height: 32px;
+    right: 260px;
+    top: 28px;
+
+    /* Orange/$-Orange-50 */
+
+    background: #fff2e7;
+    border-radius: 32px;
+
+    .bellIcon {
+      position: absolute;
+      width: 20px;
+      height: 20px;
+      left: 6px;
+      top: 6px;
+    }
+  }
+
+  .info {
+    position: absolute;
+    width: 172px;
+    height: 42px;
+    left: 1004px;
+    top: 24px;
+
+    img {
+      position: absolute;
+      width: 40px;
+      height: 40px;
+      right: 132px;
+      top: 0px;
+
+      border-radius: 48px;
+    }
+
+    .text-1 {
+      position: absolute;
+      width: 124px;
+      height: 42px;
+      left: 48px;
+      top: 0px;
+
+      .name {
+        position: absolute;
+        width: 124px;
+        height: 24px;
+        right: 0px;
+        top: 18px;
+
+        /* 16/16 Bold */
+
+        font-family: "Nunito";
+        font-style: normal;
+        font-weight: 700;
+        font-size: 16px;
+        line-height: 24px;
+        /* identical to box height, or 150% */
+
+        /* Gray/$-gray-400 Text */
+
+        color: #535261;
+      }
+
+      .greeting {
+        position: absolute;
+        width: 47px;
+        height: 18px;
+        right: 77px;
+        top: 0px;
+
+        /* 12/12 Reg */
+
+        font-family: "Nunito";
+        font-style: normal;
+        font-weight: 400;
+        font-size: 12px;
+        line-height: 18px;
+        /* identical to box height, or 150% */
+
+        /* Gray/$-gray-300 */
+
+        color: #7e7d88;
+      }
+    }
+  }
+
+  .text {
+    position: absolute;
+    width: 120px;
+    height: 40px;
+    left: 24px;
+    top: 24px;
+
+    div {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+      padding: 10px 8px 10px 0px;
+      gap: 8px;
+
+      position: absolute;
+      width: 176px;
+      height: 40px;
+      left: 0px;
+      top: 0px;
+
+      border-radius: 8px;
+    }
+
+    .profileText {
+      width: 168px;
+      height: 30px;
+
+      /* 20/20 Bold */
+
+      font-family: "Nunito";
+      font-style: normal;
+      font-weight: 700;
+      font-size: 20px;
+      line-height: 30px;
+      color: #ff7506;
+    }
+
+    span {
+      width: 168px;
+      height: 30px;
+
+      /* 20/20 Bold */
+
+      font-family: "Nunito";
+      font-style: normal;
+      font-weight: 700;
+      font-size: 20px;
+      line-height: 30px;
+      color: #7e7d88;
+    }
+  }
+}
