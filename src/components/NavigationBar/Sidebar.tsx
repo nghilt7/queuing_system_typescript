@@ -1,5 +1,5 @@
 import { FC } from "react";
-
+import { useNavigate } from "react-router-dom";
 import "./Sidebar.scss";
 import logoutIcon from "../assets/fi_log-out.png";
 import logoAlta from "../assets/logo_alta.png";
@@ -7,7 +7,9 @@ import dashboardIcon from "../assets/dashboard.png";
 import monitorIcon from "../assets/monitor.png";
 import monitorATIcon from "../assets/deviceAT.png";
 import serviceIcon from "../assets/service.png";
+import serviceATIcon from "../assets/serviceAT.png";
 import numberIcon from "../assets/number.png";
+import numberATIcon from "../assets/numberAT.png";
 import reportIcon from "../assets/report.png";
 import settingIcon from "../assets/setting.png";
 
@@ -16,6 +18,7 @@ export interface Props {
 }
 
 export const Sidebar: FC<Props> = (props) => {
+  const navigate = useNavigate();
   return (
     <>
       <div className="side-bar">
@@ -38,6 +41,7 @@ export const Sidebar: FC<Props> = (props) => {
 
         {/* Device */}
         <div
+          onClick={() => navigate("/device")}
           className={props.active === "device" ? `monitor active` : "monitor"}
         >
           <div className="monitor-1">
@@ -52,18 +56,34 @@ export const Sidebar: FC<Props> = (props) => {
         </div>
 
         {/* Service */}
-        <div className="service">
+        <div
+          onClick={() => navigate("/service")}
+          className={props.active === "service" ? `service active` : "service"}
+        >
           <div className="service-1">
-            <img src={serviceIcon} alt="" />
-            <span>Dịch vụ</span>
+            <img
+              src={props.active === "service" ? serviceATIcon : serviceIcon}
+              alt=""
+            />
+            <span className={props.active === "service" ? "active" : ""}>
+              Dịch vụ
+            </span>
           </div>
         </div>
 
         {/* Number */}
-        <div className="number">
+        <div
+          onClick={() => navigate("/number")}
+          className={props.active === "number" ? `number active` : "number"}
+        >
           <div className="number-1">
-            <img src={numberIcon} alt="" />
-            <span>Cấp số</span>
+            <img
+              src={props.active === "number" ? numberATIcon : numberIcon}
+              alt=""
+            />
+            <span className={props.active === "number" ? "active" : ""}>
+              Cấp số
+            </span>
           </div>
         </div>
 

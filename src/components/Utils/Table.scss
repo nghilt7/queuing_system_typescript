@@ -1,0 +1,95 @@
+.table-display {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 0px;
+
+  position: absolute;
+  width: 1200px;
+  height: 490px;
+  left: 224px;
+  top: 254px;
+
+  /* Shadowbox */
+
+  filter: drop-shadow(2px 2px 8px rgba(232, 239, 244, 0.8));
+
+  .table {
+    border: none;
+    background-color: #f7f7f7 !important;
+  }
+
+  .table-striped > thead > tr:first-child {
+    border: none;
+  }
+
+  .table-striped > tbody > tr {
+    border: none;
+  }
+
+  .table-striped > thead > tr > th {
+    background-color: #ff9138; // Choose your own color here
+    color: #fff;
+
+    font-family: "Nunito";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 24px;
+    border-left: none;
+    border-right: 1px solid #ffe3cd;
+  }
+
+  .table-striped > thead > tr > th:first-child {
+    border-top-left-radius: 10px;
+  }
+
+  .table-striped > thead > tr > th:last-child {
+    border-top-right-radius: 10px;
+  }
+
+  .table-striped > tbody > tr > td,
+  .table-striped > tbody > tr > th {
+    border: none;
+  }
+
+  .table-striped > tbody > tr > td {
+    border: none;
+  }
+
+  .table-striped > tbody > tr:nth-child(odd) > td,
+  .table-striped > tbody > tr:nth-child(odd) > th {
+    background-color: #fff2e7 !important;
+    border-left: 1px solid #ffe3cd;
+    border-right: 1px solid #ffe3cd;
+  }
+
+  //   #fff2e7
+
+  .table-striped > tbody > tr:nth-child(even) > td,
+  .table-striped > tbody > tr:nth-child(even) > th {
+    background-color: #fff;
+    border-left: 1px solid #ffe3cd;
+    border-right: 1px solid #ffe3cd;
+  }
+
+  .table-striped > tbody > tr:last-child > td:last-child {
+    border-bottom-right-radius: 10px;
+    border: none;
+  }
+
+  .table-striped > tbody > tr:last-child > td:first-child {
+    border-bottom-left-radius: 10px;
+    border: none;
+  }
+
+  .table-striped > tbody > tr:nth-of-type(odd)* {
+    color: black;
+  }
+
+  .blueText {
+    text-decoration-line: underline;
+    cursor: pointer;
+    color: #4277ff !important;
+  }
+}

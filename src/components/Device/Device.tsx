@@ -8,81 +8,63 @@ import { AddNewButton } from "../NavigationBar/AddNewButton";
 import { Pagination } from "../NavigationBar/Pagination";
 import arrowDownIcon from "../assets/fi_chevron-down.png";
 import searchIcon from "../assets/fi_search.png";
+import { Table } from "../Utils/Table";
+
+export interface Props {}
+
+const headers = [
+  {
+    title: "Mã thiết bị",
+  },
+  {
+    title: "Tên thiết bị",
+  },
+  {
+    title: "Địa chỉ IP",
+  },
+  {
+    title: "Trạng thái hoạt động",
+  },
+  {
+    title: "Trạng thái kết nối",
+  },
+  {
+    title: "Dịch vụ sữ dụng",
+  },
+  {},
+  {},
+];
 
 const datas = [
   {
-    deviceId: "KID_01",
-    nameDevice: "Kiosk",
-    ipAddress: "192.168.1.0",
-    statusAction: "Hoạt động",
-    statusConnect: "Mất kết nối",
-    serviceUse: "Khám tim mạch, Khám mắt...",
-    detail: "Chi tiết",
-    update: "Cập nhật",
-  },
-  {
-    deviceId: "KID_01",
-    nameDevice: "Kiosk",
-    ipAddress: "192.168.1.0",
-    statusAction: "Hoạt động",
-    statusConnect: "Mất kết nối",
-    serviceUse: "Khám tim mạch, Khám mắt...",
-    detail: "Chi tiết",
-    update: "Cập nhật",
-  },
-  {
-    deviceId: "KID_01",
-    nameDevice: "Kiosk",
-    ipAddress: "192.168.1.0",
-    statusAction: "Hoạt động",
-    statusConnect: "Mất kết nối",
-    serviceUse: "Khám tim mạch, Khám mắt...",
-    detail: "Chi tiết",
-    update: "Cập nhật",
-  },
-  {
-    deviceId: "KID_01",
-    nameDevice: "Kiosk",
-    ipAddress: "192.168.1.0",
-    statusAction: "Hoạt động",
-    statusConnect: "Mất kết nối",
-    serviceUse: "Khám tim mạch, Khám mắt...",
-    detail: "Chi tiết",
-    update: "Cập nhật",
-  },
-  {
-    deviceId: "KID_01",
-    nameDevice: "Kiosk",
-    ipAddress: "192.168.1.0",
-    statusAction: "Hoạt động",
-    statusConnect: "Mất kết nối",
-    serviceUse: "Khám tim mạch, Khám mắt...",
-    detail: "Chi tiết",
-    update: "Cập nhật",
-  },
-  {
-    deviceId: "KID_01",
-    nameDevice: "Kiosk",
-    ipAddress: "192.168.1.0",
-    statusAction: "Hoạt động",
-    statusConnect: "Mất kết nối",
-    serviceUse: "Khám tim mạch, Khám mắt...",
-    detail: "Chi tiết",
-    update: "Cập nhật",
-  },
-  {
-    deviceId: "KID_01",
-    nameDevice: "Kiosk",
-    ipAddress: "192.168.1.0",
-    statusAction: "Hoạt động",
-    statusConnect: "Mất kết nối",
-    serviceUse: "Khám tim mạch, Khám mắt...",
-    detail: "Chi tiết",
-    update: "Cập nhật",
+    rows: [
+      {
+        text: "KIO_01",
+      },
+      {
+        text: "Kiosk",
+      },
+      {
+        text: "192.168.1.10",
+      },
+      {
+        text: "Ngưng hoạt động",
+      },
+      {
+        text: "Mất kết nối",
+      },
+      {
+        text: "Khám tim mạch, Khám mắt...",
+      },
+      {
+        text: "Chi tiết",
+      },
+      {
+        text: "Cập nhật",
+      },
+    ],
   },
 ];
-
-export interface Props {}
 
 export const Device: FC<Props> = (props: Props) => {
   return (
@@ -115,51 +97,8 @@ export const Device: FC<Props> = (props: Props) => {
           <img className="searchIcon" src={searchIcon} alt="" />
         </div>
 
-        <div className="table-display">
-          <div className="table-header">
-            <span className="s-first">Mã thiết bị</span>
-            <span className="s-second">Tên thiết bị</span>
-            <span className="s-third">Địa chỉ IP</span>
-            <span className="s-four">Trạng thái hoạt động</span>
-            <span className="s-fit">Trạng thái kết nối</span>
-            <span className="s-six">Dịch vụ sữ dụng</span>
-            <span className="s-seven"></span>
-            <span className="s-last"></span>
-          </div>
-          <div className="table-body">
-            {datas.map((data, index) => {
-              return (
-                <div className={`table-group-${index} d-flex`}>
-                  <div className="b-first">
-                    <span>{data.deviceId}</span>
-                  </div>
-                  <div className="b-second">
-                    <span>{data.nameDevice}</span>
-                  </div>
-                  <div className="b-third">
-                    <span>{data.ipAddress}</span>
-                  </div>
-                  <div className="b-four">
-                    <span>{data.statusAction}</span>
-                  </div>
-                  <div className="b-fit">
-                    <span>{data.statusConnect}</span>
-                  </div>
-                  <div className="b-six">
-                    <span>{data.serviceUse}</span>
-                    <span className="more">Xem thêm</span>
-                  </div>
-                  <div className="b-seven">
-                    <span>{data.detail}</span>
-                  </div>
-                  <div className="b-last">
-                    <span>{data.update}</span>
-                  </div>
-                </div>
-              );
-            })}
-          </div>
-        </div>
+        {/* Table */}
+        <Table headers={headers} datas={datas} />
 
         {/* Add icon */}
         <AddNewButton icon={addIcon} title="Thêm thiết bị" />

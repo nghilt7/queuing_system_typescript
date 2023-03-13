@@ -1,0 +1,26 @@
+.search-container {
+  span {
+    font-family: "Nunito";
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 24px;
+    color: #282739;
+  }
+  .search {
+    width: 300px;
+    input {
+      padding: 10px 56px 13px 12px;
+      width: 300px;
+      height: 44px;
+      border: 1.5px solid #d4d4d7;
+      border-radius: 8px;
+    }
+
+    i {
+      padding-right: 5px;
+      color: #ff7506;
+      cursor: pointer;
+    }
+  }
+}
